@@ -6,13 +6,11 @@ const Source = ({sourceType, setSourceType}) => {
     }
 
   return (
-      <div>
-    <div>
+      <>
     <fieldset className="settings-module col-xl-2 col-lg-2 col-md-2 col-sm-4 col-xs-12">
-
-      
-    </fieldset>
       <legend>Source</legend>
+      <label class="col-form-label col-form-label-sm"> &nbsp; </label>
+                    <div class="custom-control custom-radio">
       <input
                             type="radio"
                             className="custom-control-input"
@@ -33,9 +31,9 @@ const Source = ({sourceType, setSourceType}) => {
                             id="tri-grams"
                             name="source-radio-group"
                             value="trigrams"
-                            v-model="data.source"
+                            
                             checked = {sourceType === "trigrams"}
-                            // onSelect={handleOnselect}
+                            
                             onClick={handleOnselect}
                         />
                         <label className="custom-control-label" for="tri-grams">Trigrams</label>
@@ -47,9 +45,8 @@ const Source = ({sourceType, setSourceType}) => {
                             id="tetra-grams"
                             name="source-radio-group"
                             value="tetragrams"
-                            v-model="data.source"
+                            
                             checked = {sourceType === "tetragrams"}
-                            // onSelect={handleOnselect}
                             onClick={handleOnselect}
 
                         />
@@ -62,16 +59,17 @@ const Source = ({sourceType, setSourceType}) => {
                             id="words"
                             name="source-radio-group"
                             value="words"
-                            v-model="data.source"
+                           
                             checked = {sourceType === "words"}
-                            // onSelect={handleOnselect}
+                            
                             onClick={handleOnselect}
                         />
                         <label className="custom-control-label" for="words">Words</label>
-      </div>
+                    </div>
+    </fieldset>
+      
 
-    
-      </div>
+    </>
   )
 }
 

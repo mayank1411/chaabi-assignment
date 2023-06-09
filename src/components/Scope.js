@@ -5,7 +5,7 @@ const Scope = ({scopeType, setScopeType}) => {
         setScopeType(e.target.value)
     }
   return (
-    <div>
+    <>
     <fieldset className="settings-module col-xl-2 col-lg-2 col-md-2 col-sm-4 col-xs-12 p-4">
 
 
@@ -61,7 +61,7 @@ const Scope = ({scopeType, setScopeType}) => {
                     </div>
                 </div>
     </fieldset>
-    </div>
+    </>
   )
 }
 
